@@ -124,8 +124,12 @@ function initBackToTop() {
   });
 }
 
+// Chave de acesso pública do Web3Forms (https://web3forms.com).
+const WEB3FORMS_ACCESS_KEY = '6cc613b8-a0b6-4f27-9530-bea689ffb785';
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
+
 /**
- * Envia o formulário de contato via fetch para o Formspree.
+ * Envia o formulário de contato via fetch para o Web3Forms.
  * Em caso de sucesso, substitui o formulário por uma mensagem de sucesso.
  * Em caso de erro, exibe uma mensagem de erro amigável acima do botão.
  */
@@ -142,16 +146,26 @@ function initContactForm() {
     errorMessage?.setAttribute('hidden', '');
     setFormLoading(form, submitBtn, true);
 
+    const payload = {
+      access_key: WEB3FORMS_ACCESS_KEY,
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value,
+    };
+
     try {
-      const response = await fetch(form.action, {
+      const response = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
-        body: new FormData(form),
+        body: JSON.stringify(payload),
         headers: {
+          'Content-Type': 'application/json',
           Accept: 'application/json',
         },
       });
 
-      if (response.ok) {
+      const result = await response.json().catch(() => null);
+
+      if (response.ok && result?.success) {
         showFormSuccess(formContainer);
       } else {
         errorMessage?.removeAttribute('hidden');
