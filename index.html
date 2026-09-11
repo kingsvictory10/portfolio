@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio | Vítor Barbosa</title>
+  <meta name="description" content="Portfólio pessoal de Vítor Barbosa — Desenvolvedor em Formação" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="header" id="header">
+    <nav class="navbar container">
+      <a href="#hero" class="logo">Ví<span>tor</span></a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="nav-link">Início</a></li>
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#projetos" class="nav-link">Projetos</a></li>
+        <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero__content">
+        <p class="hero__greeting">Olá, eu sou</p>
+        <h1 class="hero__title">Vítor Barbosa</h1>
+        <h2 class="hero__subtitle">Desenvolvedor em Formação</h2>
+        <p class="hero__description">
+          Estudante de Engenharia de Software com perfil autodidata e
+          experiência prática em projetos reais. Experiente em AI Coding
+          e Prompt Engineering.
+        </p>
+        <div class="hero__actions">
+          <a href="#projetos" class="btn btn--primary">Ver Projetos</a>
+          <a href="#contato" class="btn btn--outline">Fale Comigo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <h2 class="section__title">Sobre <span>Mim</span></h2>
+        <p class="section__subtitle">Um pouco da minha trajetória e do que me motiva</p>
+
+        <div class="sobre__content">
+          <div class="sobre__image">
+            <img src="Foto.jpeg" alt="Foto de Vítor Barbosa" class="sobre__photo" />
+          </div>
+          <div class="sobre__text">
+            <p>
+              Estudante de Engenharia de Software (2º período) com perfil
+              fortemente autodidata e experiência prática no desenvolvimento
+              de soluções reais. Combino base acadêmica sólida com
+              envolvimento direto em projetos de software, aplicando
+              ferramentas modernas de AI Coding e Engenharia de Prompt para
+              acelerar ciclos de desenvolvimento.
+            </p>
+            <p>
+              Vivência internacional de longo prazo na África Ocidental
+              desenvolveu forte inteligência cultural e adaptabilidade.
+            </p>
+
+            <ul class="sobre__info">
+              <li><strong>Nome:</strong> <span>Vítor Oliveira de Jesus Barbosa</span></li>
+              <li><strong>E-mail:</strong> <span>vitorjesusb10@gmail.com</span></li>
+              <li><strong>Localização:</strong> <span>Anápolis, GO — Brasil</span></li>
+              <li><strong>Disponibilidade:</strong> <span>Período integral — Início imediato</span></li>
+            </ul>
+
+            <div class="sobre__cv-actions">
+              <a href="Currículo Vítor Barbosa - pt.pdf" class="btn btn--primary" download>CV em Português <span class="btn__icon">&#8595;</span></a>
+              <a href="Currículo Vitor Barbosa - eng.pdf" class="btn btn--primary" download>CV em Inglês <span class="btn__icon">&#8595;</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos Section -->
+    <section class="section section--alt" id="projetos">
+      <div class="container">
+        <h2 class="section__title">Meus <span>Projetos</span></h2>
+        <p class="section__subtitle">Uma seleção dos trabalhos que venho desenvolvendo</p>
+
+        <div class="projects__grid">
+
+          <article class="project-card">
+            <div class="project-card__image">Imagem do Projeto</div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Theo &amp; Soli App</h3>
+              <p class="project-card__description">
+                Plataforma educacional cristã para gestão de aulas e
+                conteúdo curricular.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">Stack em definição</span>
+                <span class="tag">Em desenvolvimento</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="link">Ver Projeto</a>
+                <a href="#" class="link">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__image">Imagem do Projeto</div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Auralis Flow</h3>
+              <p class="project-card__description">
+                Protótipo B2B desenvolvido no Hackathon SEBRAE.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">React</span>
+                <span class="tag">Vite</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Python</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="link">Ver Projeto</a>
+                <a href="#" class="link">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__image">Imagem do Projeto</div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Plan&amp;Do App</h3>
+              <p class="project-card__description">
+                Aplicativo de gestão para espaço de estudos.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">Stack em definição</span>
+                <span class="tag">Em desenvolvimento</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="link">Ver Projeto</a>
+                <a href="#" class="link">Código</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades Section -->
+    <section class="section" id="habilidades">
+      <div class="container">
+        <h2 class="section__title">Minhas <span>Habilidades</span></h2>
+        <p class="section__subtitle">Tecnologias e ferramentas com as quais venho trabalhando</p>
+
+        <div class="skills__grid">
+          <div class="skill-card">
+            <div class="skill-card__icon">PY</div>
+            <h3 class="skill-card__title">Python</h3>
+            <div class="skill-card__bar"><span style="width: 80%;"></span></div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">JS</div>
+            <h3 class="skill-card__title">JavaScript</h3>
+            <div class="skill-card__bar"><span style="width: 75%;"></span></div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">
+              <img src="https://cdn.simpleicons.org/git/F05032" alt="Logo do Git" loading="lazy" />
+            </div>
+            <h3 class="skill-card__title">Git</h3>
+            <div class="skill-card__bar"><span style="width: 80%;"></span></div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">&#9998;</div>
+            <h3 class="skill-card__title">Prompt Engineering</h3>
+            <div class="skill-card__bar"><span style="width: 90%;"></span></div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">AI</div>
+            <h3 class="skill-card__title">Generative AI</h3>
+            <div class="skill-card__bar"><span style="width: 85%;"></span></div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">SCR</div>
+            <h3 class="skill-card__title">Scrum</h3>
+            <div class="skill-card__bar"><span style="width: 70%;"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section class="section section--alt" id="contato">
+      <div class="container">
+        <h2 class="section__title">Fale <span>Comigo</span></h2>
+        <p class="section__subtitle">Entre em contato para propostas, dúvidas ou parcerias</p>
+
+        <div class="contact__content">
+          <div class="contact__info">
+            <div class="contact__item">
+              <span class="contact__icon">&#9993;</span>
+              <div>
+                <h3>E-mail</h3>
+                <p>vitorjesusb10@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <span class="contact__icon">&#128205;</span>
+              <div>
+                <h3>Localização</h3>
+                <p>Anápolis, GO — Brasil</p>
+              </div>
+            </div>
+
+            <div class="contact__socials">
+              <a href="https://github.com/kingsvictory10" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+              <a href="https://linkedin.com/in/vítor-oliveira-de-jesus-barbosa" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="contact__form-container" id="contact-form-container">
+            <form
+              class="contact__form"
+              id="contact-form"
+              action="https://formspree.io/f/xnpqrwky"
+              method="POST"
+            >
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Seu nome" required />
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" rows="5" placeholder="Sua mensagem..." required></textarea>
+              </div>
+
+              <p class="form-status form-status--error" id="form-error" hidden>
+                Não foi possível enviar sua mensagem. Tente novamente em instantes ou entre em contato diretamente pelo e-mail acima.
+              </p>
+
+              <button type="submit" class="btn btn--primary btn--full" id="form-submit-btn">
+                Enviar Mensagem
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <p>&copy; <span id="year"></span> Vítor Barbosa. Todos os direitos reservados.</p>
+      <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">&uarr;</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
