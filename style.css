@@ -397,6 +397,13 @@ h1, h2, h3, h4 {
   object-fit: contain;
 }
 
+/* A logo do Plan&Do usa traços escuros/transparentes,
+   por isso precisa de um fundo claro para não "sumir". */
+.project-card__image--light {
+  background-color: #ffffff;
+  padding: 16px;
+}
+
 .project-card__content {
   padding: 24px;
 }
@@ -434,10 +441,15 @@ h1, h2, h3, h4 {
 }
 
 .project-card__links .link {
+  background: none;
+  border: none;
+  border-bottom: 2px solid var(--color-accent);
+  padding: 0;
+  font-family: inherit;
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--color-text);
-  border-bottom: 2px solid var(--color-accent);
+  cursor: pointer;
   transition: color var(--transition);
 }
 
@@ -460,12 +472,6 @@ h1, h2, h3, h4 {
   border-radius: var(--radius);
   padding: 28px 24px;
   text-align: center;
-  transition: transform var(--transition), border-color var(--transition);
-}
-
-.skill-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--color-accent);
 }
 
 .skill-card__icon {
@@ -534,6 +540,11 @@ h1, h2, h3, h4 {
   font-size: 1.1rem;
 }
 
+.contact__icon svg {
+  width: 20px;
+  height: 20px;
+}
+
 .contact__item h3 {
   font-size: 1rem;
   margin-bottom: 4px;
@@ -546,17 +557,28 @@ h1, h2, h3, h4 {
 
 .contact__socials {
   display: flex;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 12px;
 }
 
 .social-link {
-  padding: 10px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
+  white-space: nowrap;
   transition: all var(--transition);
+}
+
+.social-link__icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
 }
 
 .social-link:hover {
@@ -716,6 +738,99 @@ h1, h2, h3, h4 {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* =========================================
+   MODAL DE PROJETO
+========================================= */
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition), visibility var(--transition);
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 40px 32px 32px;
+  transform: translateY(24px);
+  transition: transform var(--transition);
+}
+
+.modal-overlay.is-open .modal {
+  transform: translateY(0);
+}
+
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-alt);
+  color: var(--color-text);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.modal__close:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.modal__title {
+  font-size: 1.4rem;
+  padding-right: 32px;
+  margin-bottom: 16px;
+}
+
+.modal__description {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.modal__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.modal__status {
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.modal__status strong {
+  color: var(--color-accent);
 }
 
 /* =========================================

@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -15,7 +16,7 @@
   <!-- Header / Navbar -->
   <header class="header" id="header">
     <nav class="navbar container">
-      <a href="#hero" class="logo">Ví<span>tor</span></a>
+      <a href="#hero" class="logo">Vítor <span>Barbosa</span></a>
 
       <ul class="nav-links" id="nav-links">
         <li><a href="#hero" class="nav-link">Início</a></li>
@@ -114,8 +115,7 @@
                 <span class="tag">Em desenvolvimento</span>
               </div>
               <div class="project-card__links">
-                <a href="#" class="link">Ver Projeto</a>
-                <a href="#" class="link">Código</a>
+                <button type="button" class="link modal-trigger" data-modal="modal-theo">Saiba mais</button>
               </div>
             </div>
           </article>
@@ -136,14 +136,14 @@
                 <span class="tag">Python</span>
               </div>
               <div class="project-card__links">
-                <a href="#" class="link">Ver Projeto</a>
-                <a href="#" class="link">GitHub</a>
+                <button type="button" class="link modal-trigger" data-modal="modal-auralis">Saiba mais</button>
+                <a href="https://github.com/kingsvictory10/Telas-Auralis-Flow" class="link" target="_blank" rel="noopener noreferrer">Ver Código</a>
               </div>
             </div>
           </article>
 
           <article class="project-card">
-            <div class="project-card__image">
+            <div class="project-card__image project-card__image--light">
               <img src="Logo plan&amp;do.png" alt="Logo do projeto Plan&amp;Do App" class="project-card__logo" loading="lazy" />
             </div>
             <div class="project-card__content">
@@ -156,8 +156,7 @@
                 <span class="tag">Em desenvolvimento</span>
               </div>
               <div class="project-card__links">
-                <a href="#" class="link">Ver Projeto</a>
-                <a href="#" class="link">Código</a>
+                <button type="button" class="link modal-trigger" data-modal="modal-planado">Saiba mais</button>
               </div>
             </div>
           </article>
@@ -165,6 +164,67 @@
         </div>
       </div>
     </section>
+
+    <!-- Modais de Projetos -->
+    <div class="modal-overlay" id="modal-theo" data-modal>
+      <div class="modal">
+        <button type="button" class="modal__close" data-modal-close aria-label="Fechar modal">&times;</button>
+        <h3 class="modal__title">Theo &amp; Soli App</h3>
+        <p class="modal__description">
+          Plataforma educacional cristã para gestão de aulas e conteúdo
+          curricular do currículo Theo &amp; Soli, atendendo igrejas em todo
+          o Brasil. O app equipa professores para conduzirem aulas mais
+          dinâmicas, com controle do telão pelo celular e registro de
+          desempenho dos alunos.
+        </p>
+        <div class="modal__tags">
+          <span class="tag">Stack em definição</span>
+        </div>
+        <p class="modal__status">
+          <strong>Status:</strong> Em desenvolvimento — MVP previsto para outubro de 2026
+        </p>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-auralis" data-modal>
+      <div class="modal">
+        <button type="button" class="modal__close" data-modal-close aria-label="Fechar modal">&times;</button>
+        <h3 class="modal__title">Auralis Flow</h3>
+        <p class="modal__description">
+          Protótipo B2B desenvolvido no Hackathon SEBRAE com foco em saúde
+          mental de adolescentes. Solução que combina monitoramento
+          contínuo e visualização de padrões emocionais para auxiliar
+          profissionais de saúde.
+        </p>
+        <div class="modal__tags">
+          <span class="tag">React</span>
+          <span class="tag">Vite</span>
+          <span class="tag">Tailwind CSS</span>
+          <span class="tag">Python</span>
+          <span class="tag">ReportLab</span>
+        </div>
+        <p class="modal__status">
+          <strong>Status:</strong> Protótipo concluído
+        </p>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-planado" data-modal>
+      <div class="modal">
+        <button type="button" class="modal__close" data-modal-close aria-label="Fechar modal">&times;</button>
+        <h3 class="modal__title">Plan&amp;Do App</h3>
+        <p class="modal__description">
+          Aplicativo de gestão para o espaço de estudos Plan&amp;Do, com foco
+          em controle operacional e atendimento aos alunos.
+        </p>
+        <div class="modal__tags">
+          <span class="tag">Stack em definição</span>
+        </div>
+        <p class="modal__status">
+          <strong>Status:</strong> Em desenvolvimento
+        </p>
+      </div>
+    </div>
 
     <!-- Habilidades Section -->
     <section class="section" id="habilidades">
@@ -174,12 +234,16 @@
 
         <div class="skills__grid">
           <div class="skill-card">
-            <div class="skill-card__icon">PY</div>
+            <div class="skill-card__icon">
+              <img src="https://cdn.simpleicons.org/python/3776AB" alt="Ícone do Python" loading="lazy" />
+            </div>
             <h3 class="skill-card__title">Python</h3>
             <div class="skill-card__bar"><span style="width: 80%;"></span></div>
           </div>
           <div class="skill-card">
-            <div class="skill-card__icon">JS</div>
+            <div class="skill-card__icon">
+              <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="Ícone do JavaScript" loading="lazy" />
+            </div>
             <h3 class="skill-card__title">JavaScript</h3>
             <div class="skill-card__bar"><span style="width: 75%;"></span></div>
           </div>
@@ -218,7 +282,12 @@
         <div class="contact__content">
           <div class="contact__info">
             <div class="contact__item">
-              <span class="contact__icon">&#9993;</span>
+              <span class="contact__icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M3 5.5A1.5 1.5 0 0 1 4.5 4h15A1.5 1.5 0 0 1 21 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5v-13Z" stroke="#ffffff" stroke-width="1.6" stroke-linejoin="round" />
+                  <path d="M4 6l7.35 6.13a1 1 0 0 0 1.3 0L20 6" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
               <div>
                 <h3>E-mail</h3>
                 <p>vitorjesusb10@gmail.com</p>
@@ -233,8 +302,22 @@
             </div>
 
             <div class="contact__socials">
-              <a href="https://github.com/kingsvictory10" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
-              <a href="https://linkedin.com/in/vítor-oliveira-de-jesus-barbosa" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+              <a href="https://github.com/kingsvictory10" target="_blank" rel="noopener noreferrer" class="social-link">
+                <img src="https://cdn.simpleicons.org/github/ffffff" alt="" class="social-link__icon" loading="lazy" />
+                GitHub
+              </a>
+              <a href="https://linkedin.com/in/vítor-oliveira-de-jesus-barbosa" target="_blank" rel="noopener noreferrer" class="social-link">
+                <img src="linkedin.svg" alt="" class="social-link__icon" loading="lazy" />
+                LinkedIn
+              </a>
+              <a href="https://wa.me/5591986074927" target="_blank" rel="noopener noreferrer" class="social-link">
+                <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="" class="social-link__icon" loading="lazy" />
+                WhatsApp
+              </a>
+              <a href="https://www.instagram.com/vitor_barbosa_10/" target="_blank" rel="noopener noreferrer" class="social-link">
+                <img src="https://cdn.simpleicons.org/instagram/E1306C" alt="" class="social-link__icon" loading="lazy" />
+                Instagram
+              </a>
             </div>
           </div>
 

@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initBackToTop();
   initContactForm();
+  initProjectModals();
   initCurrentYear();
 });
 
@@ -190,6 +191,61 @@ function showFormSuccess(formContainer) {
       </p>
     </div>
   `;
+}
+
+/**
+ * Controla a abertura e o fechamento dos modais de "Saiba mais"
+ * dos cards de projeto.
+ */
+function initProjectModals() {
+  const triggers = document.querySelectorAll('.modal-trigger');
+  const modals = document.querySelectorAll('[data-modal]');
+  if (!triggers.length || !modals.length) return;
+
+  let activeModal = null;
+
+  const openModal = (modal) => {
+    if (!modal) return;
+    modal.classList.add('is-open');
+    document.body.classList.add('modal-open');
+    activeModal = modal;
+  };
+
+  const closeModal = (modal) => {
+    if (!modal) return;
+    modal.classList.remove('is-open');
+    document.body.classList.remove('modal-open');
+    activeModal = null;
+  };
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      const modalId = trigger.getAttribute('data-modal');
+      const modal = document.getElementById(modalId);
+      openModal(modal);
+    });
+  });
+
+  modals.forEach((modal) => {
+    // Fecha ao clicar fora do conteúdo do modal (na sobreposição escura).
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        closeModal(modal);
+      }
+    });
+
+    // Fecha ao clicar no botão "X".
+    modal.querySelectorAll('[data-modal-close]').forEach((closeBtn) => {
+      closeBtn.addEventListener('click', () => closeModal(modal));
+    });
+  });
+
+  // Fecha o modal ativo ao pressionar a tecla "Esc".
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && activeModal) {
+      closeModal(activeModal);
+    }
+  });
 }
 
 /**
