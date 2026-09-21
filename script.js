@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initContactForm();
   initProjectModals();
+  initTypewriter();
   initCurrentYear();
 });
 
@@ -260,6 +261,75 @@ function initProjectModals() {
       closeModal(activeModal);
     }
   });
+}
+
+/**
+ * Efeito de digitação (typewriter) em sequência no hero: primeiro digita
+ * o nome, e ao terminar, digita o subtítulo — ambos a 120ms por caractere.
+ * O cursor "|" acompanha a digitação (movendo-se do nome para o
+ * subtítulo) e, 2 segundos após o subtítulo terminar, desaparece com
+ * um fade suave.
+ */
+function initTypewriter() {
+  const nameEl = document.getElementById('typewriter-name');
+  const subtitleEl = document.getElementById('typewriter-text');
+  const cursorEl = document.getElementById('typewriter-cursor');
+  if (!nameEl || !subtitleEl || !cursorEl) return;
+
+  const nameText = nameEl.getAttribute('data-full-text') || nameEl.textContent;
+  const subtitleText =
+    subtitleEl.getAttribute('data-full-text') || subtitleEl.textContent;
+
+  // Respeita a preferência do usuário por menos animações.
+  const prefersReducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches;
+
+  if (prefersReducedMotion) {
+    nameEl.textContent = nameText;
+    subtitleEl.textContent = subtitleText;
+    return;
+  }
+
+  const CHAR_DELAY = 120;
+
+  nameEl.textContent = '';
+  subtitleEl.textContent = '';
+  cursorEl.classList.add('is-blinking');
+
+  const typeText = (el, text, onDone) => {
+    let charIndex = 0;
+
+    const typeNextChar = () => {
+      if (charIndex < text.length) {
+        el.textContent += text.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeNextChar, CHAR_DELAY);
+      } else {
+        onDone();
+      }
+    };
+
+    typeNextChar();
+  };
+
+  const startSubtitle = () => {
+    // Move o cursor do final do nome para o final do subtítulo.
+    subtitleEl.insertAdjacentElement('afterend', cursorEl);
+
+    typeText(subtitleEl, subtitleText, () => {
+      // Subtítulo concluído: cursor pisca por mais 2s e depois some.
+      setTimeout(() => {
+        cursorEl.classList.remove('is-blinking');
+        cursorEl.classList.add('is-hidden');
+      }, 2000);
+    });
+  };
+
+  // Pequeno atraso inicial antes de começar a digitar o nome.
+  setTimeout(() => {
+    typeText(nameEl, nameText, startSubtitle);
+  }, 300);
 }
 
 /**

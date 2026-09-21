@@ -23,6 +23,7 @@
         <li><a href="#sobre" class="nav-link">Sobre</a></li>
         <li><a href="#projetos" class="nav-link">Projetos</a></li>
         <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+        <li><a href="#certificacoes" class="nav-link">Certificações</a></li>
         <li><a href="#contato" class="nav-link">Contato</a></li>
       </ul>
 
@@ -40,8 +41,16 @@
     <section class="hero" id="hero">
       <div class="container hero__content">
         <p class="hero__greeting">Olá, eu sou</p>
-        <h1 class="hero__title">Vítor Barbosa</h1>
-        <h2 class="hero__subtitle">Desenvolvedor em Formação</h2>
+        <h1 class="hero__title"><span class="typewriter-text" id="typewriter-name" data-full-text="Vítor Barbosa">Vítor Barbosa</span><span class="typewriter-cursor" id="typewriter-cursor" aria-hidden="true">|</span></h1>
+        <h2 class="hero__subtitle">
+          <span class="typewriter-text" id="typewriter-text" data-full-text="Desenvolvedor em Formação">Desenvolvedor em Formação</span>
+        </h2>
+
+        <div class="availability-badge">
+          <span class="availability-badge__dot"></span>
+          Disponível para estágio
+        </div>
+
         <p class="hero__description">
           Estudante de Engenharia de Software com perfil autodidata e
           experiência prática em projetos reais. Experiente em AI Coding
@@ -50,6 +59,28 @@
         <div class="hero__actions">
           <a href="#projetos" class="btn btn--primary">Ver Projetos</a>
           <a href="#contato" class="btn btn--outline">Fale Comigo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contadores Section -->
+    <section class="stats">
+      <div class="container stats__grid">
+        <div class="stat-item">
+          <span class="stat-item__number">3</span>
+          <span class="stat-item__label">Projetos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-item__number">3</span>
+          <span class="stat-item__label">Idiomas</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-item__number">5</span>
+          <span class="stat-item__label">Certificações</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-item__number">1</span>
+          <span class="stat-item__label">Hackathon</span>
         </div>
       </div>
     </section>
@@ -269,8 +300,48 @@
       </div>
     </section>
 
+    <!-- Certificações Section -->
+    <section class="section section--alt" id="certificacoes">
+      <div class="container">
+        <h2 class="section__title">Minhas <span>Certificações</span></h2>
+        <p class="section__subtitle">Cursos e certificados que venho concluindo ao longo da jornada</p>
+
+        <div class="certifications__grid">
+          <article class="certification-card">
+            <h3 class="certification-card__title">Scrum Fundamentals Certified (SFC&trade;)</h3>
+            <p class="certification-card__issuer">SCRUMstudy</p>
+            <a href="certificados/scrum.pdf" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Ver certificado</a>
+          </article>
+
+          <article class="certification-card">
+            <h3 class="certification-card__title">GenAI Essentials</h3>
+            <p class="certification-card__issuer">Mate Academy</p>
+            <a href="certificados/genai.pdf" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Ver certificado</a>
+          </article>
+
+          <article class="certification-card">
+            <h3 class="certification-card__title">Hackathon SEBRAE 2026</h3>
+            <p class="certification-card__issuer">SEBRAE</p>
+            <a href="certificados/hackathon.pdf" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Ver certificado</a>
+          </article>
+
+          <article class="certification-card">
+            <h3 class="certification-card__title">Cursor com Python</h3>
+            <p class="certification-card__issuer">Santander Open Academy</p>
+            <a href="certificados/cursor-python.pdf" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Ver certificado</a>
+          </article>
+
+          <article class="certification-card">
+            <h3 class="certification-card__title">Responsible Prompting</h3>
+            <p class="certification-card__issuer">Santander Open Academy</p>
+            <a href="certificados/responsible-prompting.pdf" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Ver certificado</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- Contato Section -->
-    <section class="section section--alt" id="contato">
+    <section class="section" id="contato">
       <div class="container">
         <h2 class="section__title">Fale <span>Comigo</span></h2>
         <p class="section__subtitle">Entre em contato para propostas, dúvidas ou parcerias</p>
