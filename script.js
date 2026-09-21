@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initProjectModals();
   initTypewriter();
+  initFaviconSwitcher();
   initCurrentYear();
 });
 
@@ -330,6 +331,24 @@ function initTypewriter() {
   setTimeout(() => {
     typeText(nameEl, nameText, startSubtitle);
   }, 300);
+}
+
+/**
+ * Troca o favicon dinamicamente de acordo com a visibilidade da aba.
+ * Aba ativa: favicon.svg (padrão). Aba em segundo plano: favicon-inactive.svg
+ * (versão apagada com um ponto laranja indicando atividade em pausa).
+ */
+function initFaviconSwitcher() {
+  const favicon = document.getElementById('favicon');
+  if (!favicon) return;
+
+  const ACTIVE_ICON = 'favicon.svg';
+  const INACTIVE_ICON = 'favicon-inactive.svg';
+
+  document.addEventListener('visibilitychange', () => {
+    favicon.href =
+      document.visibilityState === 'visible' ? ACTIVE_ICON : INACTIVE_ICON;
+  });
 }
 
 /**

@@ -790,6 +790,12 @@ h1, h2, h3, h4 {
   color: #f87171;
 }
 
+.form-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
 /* Mensagem de sucesso (substitui o formulário) */
 .form-success {
   background-color: var(--color-surface);
