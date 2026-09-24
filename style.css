@@ -497,6 +497,19 @@ h1, h2, h3, h4 {
   object-fit: contain;
 }
 
+/* Cards que usam uma screenshot/foto real (em vez de logo) preenchem
+   o espaço todo, sem o padding usado para centralizar logos. */
+.project-card__image--photo {
+  padding: 0;
+}
+
+.project-card__logo--cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
 /* A logo do Plan&Do usa traços escuros/transparentes,
    por isso precisa de um fundo claro para não "sumir". */
 .project-card__image--light {
