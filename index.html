@@ -10,6 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" id="favicon" />
   <link rel="stylesheet" href="style.css" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vítor Barbosa | Desenvolvedor Júnior">
+  <meta property="og:description" content="Python, Web e AI Coding. Projetos, certificações e contato.">
+  <meta property="og:url" content="https://vitorbarbosa-dev.vercel.app/">
+  <meta property="og:image" content="https://vitorbarbosa-dev.vercel.app/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 
@@ -67,7 +73,7 @@
     <section class="stats">
       <div class="container stats__grid">
         <div class="stat-item">
-          <span class="stat-item__number">3</span>
+          <span class="stat-item__number">5</span>
           <span class="stat-item__label">Projetos</span>
         </div>
         <div class="stat-item">
@@ -130,29 +136,9 @@
     <section class="section section--alt" id="projetos">
       <div class="container">
         <h2 class="section__title">Meus <span>Projetos</span></h2>
-        <p class="section__subtitle">Uma seleção dos trabalhos que venho desenvolvendo</p>
+        <p class="section__subtitle">Projetos pessoais, de estágio e freelances que venho desenvolvendo</p>
 
         <div class="projects__grid">
-
-          <article class="project-card">
-            <div class="project-card__image project-card__image--theo">
-              <img src="theo-soli.svg" alt="Logo do projeto Theo &amp; Soli App" class="project-card__logo" loading="lazy" />
-            </div>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Theo &amp; Soli App</h3>
-              <p class="project-card__description">
-                Plataforma educacional cristã para gestão de aulas e
-                conteúdo curricular.
-              </p>
-              <div class="project-card__tags">
-                <span class="tag">Stack em definição</span>
-                <span class="tag">Em desenvolvimento</span>
-              </div>
-              <div class="project-card__links">
-                <button type="button" class="link modal-trigger" data-modal="modal-theo">Saiba mais</button>
-              </div>
-            </div>
-          </article>
 
           <article class="project-card">
             <div class="project-card__image">
@@ -217,32 +203,54 @@
               </div>
             </div>
           </article>
+          <article class="project-card">
+            <div class="project-card__image project-card__image--photo">
+              <img src="plando-site.png" alt="Captura de tela do site da Plan&amp;Do" class="project-card__logo project-card__logo--cover" loading="lazy" />
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Plan&amp;Do Site</h3>
+              <p class="project-card__description">
+                Site institucional do espaço de estudos Plan&amp;Do, com unidades em Anápolis e Brasília.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="project-card__links">
+                <button type="button" class="link modal-trigger" data-modal="modal-planado-site">Saiba mais</button>
+                <a href="https://plandoestudos.com.br/" class="link" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+              </div>
+            </div>
+          </article>
 
+          <article class="project-card">
+            <div class="project-card__image project-card__image--photo">
+              <img src="ubiratan-morais.png" alt="Captura de tela do site de Ubiratan Morais" class="project-card__logo project-card__logo--cover" loading="lazy" />
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Site Ubiratan Morais</h3>
+              <p class="project-card__description">
+                Site para consultor de consórcio, com foco em contato direto por WhatsApp.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Freelance</span>
+              </div>
+              <div class="project-card__links">
+                <button type="button" class="link modal-trigger" data-modal="modal-ubiratan">Saiba mais</button>
+                <a href="https://ubiratanmorais.vercel.app/" class="link" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+              </div>
+            </div>
+          </article>
         </div>
+        <p class="projects__cta">Faço sites sob demanda para pequenos negócios. <a href="#contato" class="link">Vamos conversar</a></p>
       </div>
     </section>
 
     <!-- Modais de Projetos -->
-    <div class="modal-overlay" id="modal-theo" data-modal>
-      <div class="modal">
-        <button type="button" class="modal__close" data-modal-close aria-label="Fechar modal">&times;</button>
-        <h3 class="modal__title">Theo &amp; Soli App</h3>
-        <p class="modal__description">
-          Plataforma educacional cristã para gestão de aulas e conteúdo
-          curricular do currículo Theo &amp; Soli, atendendo igrejas em todo
-          o Brasil. O app equipa professores para conduzirem aulas mais
-          dinâmicas, com controle do telão pelo celular e registro de
-          desempenho dos alunos.
-        </p>
-        <div class="modal__tags">
-          <span class="tag">Stack em definição</span>
-        </div>
-        <p class="modal__status">
-          <strong>Status:</strong> Em desenvolvimento — MVP previsto para outubro de 2026
-        </p>
-      </div>
-    </div>
-
     <div class="modal-overlay" id="modal-auralis" data-modal>
       <div class="modal">
         <button type="button" class="modal__close" data-modal-close aria-label="Fechar modal">&times;</button>
@@ -302,6 +310,46 @@
         </p>
       </div>
     </div>
+    
+    <div class="modal-overlay" id="modal-planado-site" data-modal>
+      <div class="modal">
+        <button type="button" class="modal__close" data-modal-close aria-label="Fechar modal">&times;</button>
+        <h3 class="modal__title">Plan&amp;Do Site</h3>
+        <p class="modal__description">
+          Site institucional do espaço de estudos Plan&amp;Do, com unidades em
+          Anápolis e Brasília. Apresenta os diferenciais, os planos e as regras
+          de contrato, e leva o visitante a agendar uma visita.
+        </p>
+        <div class="modal__tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <p class="modal__status">
+          <strong>Status:</strong> Publicado, em refinamento
+        </p>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-ubiratan" data-modal>
+      <div class="modal">
+        <button type="button" class="modal__close" data-modal-close aria-label="Fechar modal">&times;</button>
+        <h3 class="modal__title">Site Ubiratan Morais</h3>
+        <p class="modal__description">
+          Site de apresentação para consultor de consórcio, com conquistas,
+          produtos e botão direto para WhatsApp. Projeto freelance.
+        </p>
+        <div class="modal__tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Freelance</span>
+        </div>
+        <p class="modal__status">
+          <strong>Status:</strong> Publicado
+        </p>
+      </div>
+    </div>
 
     <!-- Habilidades Section -->
     <section class="section" id="habilidades">
@@ -357,6 +405,24 @@
               <img src="https://cdn.simpleicons.org/linux/ffffff" alt="Ícone do Linux" loading="lazy" />
             </div>
             <h3 class="skill-card__title">Linux</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent)" role="img" aria-label="Ícone de mapa do QGIS">
+                <path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+            </div>
+            <h3 class="skill-card__title">QGIS</h3>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card__icon">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent)" role="img" aria-label="Ícone de gota do GisWater">
+                <path d="M12 2.8s6 6.1 6 10.3a6 6 0 0 1-12 0C6 8.9 12 2.8 12 2.8z"/>
+              </svg>
+            </div>
+            <h3 class="skill-card__title">GisWater</h3>
           </div>
         </div>
       </div>

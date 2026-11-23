@@ -2,15 +2,15 @@
    RESET & VARIÁVEIS
 ========================================= */
 :root {
-  --color-bg: #0d1117;
-  --color-bg-alt: #11161d;
-  --color-surface: #161b22;
-  --color-border: #22272e;
-  --color-text: #e6edf3;
-  --color-text-muted: #9aa5b1;
-  --color-accent: #3B82F6;
-  --color-accent-hover: #2563eb;
-  --color-accent-soft: rgba(59, 130, 246, 0.12);
+  --color-bg: #0a0a0b;
+  --color-bg-alt: #0f0f11;
+  --color-surface: #151518;
+  --color-border: #26262b;
+  --color-text: #ededf0;
+  --color-text-muted: #a1a1aa;
+  --color-accent: #DC2626;
+  --color-accent-hover: #B91C1C;
+  --color-accent-soft: rgba(220, 38, 38, 0.14);
 
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -86,7 +86,7 @@ h1, h2, h3, h4 {
 .btn--primary:hover {
   background-color: var(--color-accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.35);
 }
 
 .btn--outline {
@@ -1076,4 +1076,16 @@ body.modal-open {
     gap: 12px;
     text-align: center;
   }
+}
+
+.projects__cta {
+  text-align: center;
+  margin-top: 40px;
+  color: var(--color-text-muted);
+}
+
+.project-card,
+.skill-card,
+.certification-card {
+  background-image: radial-gradient(240px circle at var(--mx, -999px) var(--my, -999px), rgba(220, 38, 38, 0.16), transparent 70%);
 }
